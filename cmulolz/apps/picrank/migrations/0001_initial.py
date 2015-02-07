@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
             name='Winner',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('date', models.DateField(auto_now_add=True)),
+                ('date', models.DateField()),
                 ('picture', models.OneToOneField(to='picrank.Picture')),
             ],
             options={
