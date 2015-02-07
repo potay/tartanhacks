@@ -14,6 +14,9 @@ class Vote(models.Model):
 	timestamp = models.DateTimeField(auto_now_add = True)
 	picture = models.ForeignKey('Picture')
 
+	def __str__(self):
+		return str(self.picture.image) + ": " + str(self.picture.text)
+
 class Winner(models.Model):
 	date = models.DateField(editable = True)
 	picture = models.OneToOneField('Picture')
