@@ -16,7 +16,7 @@ def upload(request):
 def vote(request):
 	picture_id = None
 	if request.method == 'POST':
-		picture_id = request.POST['selected']
+		picture_id = request.POST['selectedPic']
 		picture = Picture.objects.get(pk = picture_id)
 		vote = Vote(picture = picture)
 		vote.save()
@@ -25,7 +25,7 @@ def vote(request):
 	picture_set = Picture.objects.filter(timestamp__day = date.day,
 										 timestamp__month = date.month,
 		                                 timestamp__year = date.year)
-
+	
 	if picture_id:
 		picture_set = picture_set.exclude(pk = picture_id)
 
