@@ -1,1 +1,1 @@
-web: gunicorn django_starter.wsgi --log-file -
+web: gunicorn cmulolz.wsgi --log-file -

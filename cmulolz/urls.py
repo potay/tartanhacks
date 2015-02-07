@@ -9,7 +9,7 @@ urlpatterns = patterns('',
 
 # Main URL Patterns
 urlpatterns += patterns('',
-    url(r'^$', 'django_starter.views.home')
+    url(r'^$', 'cmulolz.views.home')
 )
 
 # Development

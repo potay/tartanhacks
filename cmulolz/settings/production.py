@@ -24,8 +24,8 @@ MANAGERS = ADMINS
 
 # Application definition
 
-ROOT_URLCONF = 'django_starter.urls'
-WSGI_APPLICATION = 'django_starter.wsgi.application'
+ROOT_URLCONF = 'cmulolz.urls'
+WSGI_APPLICATION = 'cmulolz.wsgi.application'
 
 INSTALLED_APPS = (
     'django.contrib.admin',
