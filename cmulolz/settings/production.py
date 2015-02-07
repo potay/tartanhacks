@@ -34,6 +34,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cmulolz.apps.picrank'
 
     # '{{ project_name}}.apps.accounts',
 )
@@ -79,13 +80,12 @@ DATABASES['default'] =  dj_database_url.config()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Internationalization
-LANGUAGE_CODE = 'cs-cz'
+LANGUAGE_CODE = 'en'
 LANGUAGES = (
-    'cs', gettext_noop('Czech'),
     'en', gettext_noop('English'),
 )
 
-TIME_ZONE = 'Europe/Prague'
+TIME_ZONE = 'America/New_York'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
