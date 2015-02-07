@@ -1,9 +1,20 @@
 import random, datetime
 from django.shortcuts import render
 from models import Picture, Vote, Winner
+from django.forms.models import modelformset_factory
 from forms import PictureForm
 
 # Create your views here.
+def upload(request):
+	PictureFormSet = modelformset_factory(Picture)
+	if request.method == 'POST' 
+		formset = PictureForm(request.POST)
+		if formset.is_valid():
+			form.save()
+	else:
+		formset = PictureForm()
+	return render(request, 'upload.html', {'formset': formset})
+
 def vote(request):
 	picture_id = None
 	if request.method == 'POST':
@@ -30,8 +41,8 @@ def vote(request):
 def result(request):
 	date = datetime.datetime.today()
 	picture_set = Picture.objects.filter(timestamp__day = date.day,
-									    timestamp__month = date.month,
-		                                timestamp__year = date.year)
+									     timestamp__month = date.month,
+		                                 timestamp__year = date.year)
 	
 	if picture_set > 0:
 		try:
