@@ -1,0 +1,42 @@
+
+html {
+	color: maroon;
+	background-color: #FFEDCE;
+}
+
+.row-slim {
+	margin-bottom: 0px !important;
+}
+
+.fullheight{
+	height:100%;
+}
+
+#button{
+	background-color: #FAF9FF;
+
+}
+#title{
+	height:100px;
+	background-color: #C9BCFF;
+	text-align: center;
+	line-height: 90px;
+	font-size: 20px;
+	font-family: Verdana;
+}
+
+#hover-change:hover{
+	background-color: #A29EB2;
+}
+
+.title{
+	line-height: 90px;
+	text-align: center;
+	font-size: 10px;
+	font-family: Verdana;
+}
+
+.color{
+	background-color: #C9BCFF !important;
+}
+

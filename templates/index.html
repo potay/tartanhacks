@@ -1,0 +1,177 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Parallax Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/new.css' %}"type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">Upload Pictures</a></li>
+  <li><a href="#!">View Recent Uploads</a></li>
+</ul>
+
+<nav>
+  <div class="nav-wrapper">
+    <div class="col s12">
+      <a href="#!" class="brand-logo">CMULOLz</a>
+      <ul class="right side-nav">
+        <li><a href="sass.html">Let me Vote</a></li>
+        <li><a href="components.html">Results</a></li>
+        <!-- Dropdown Trigger -->
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Settings
+          <i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Welcome to laughs and fun</h1>
+
+        <div class="row center">
+          <h5 class="header col s12 light teal-text">A new way to see what's popular in your region</h5>
+        </div>
+
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light red accent-1 lighten-1">VOTE</a>
+        </div>
+
+        <br><br>
+
+      </div>
+    </div>
+
+    <div class="parallax"><img src="{% static 'images/bruceLi.jpg' %}" alt="Bruce Lee background img 2"></div>
+
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="mdi-image-remove-red-eye"></i></h2>
+            <h5 class="center">View Popular Pictures</h5>
+
+            <p class="light">This allows you to rate pictures uploaded each day in your region</p>
+
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="mdi-social-group"></i></h2>
+            <h5 class="center">Competitive and Fun</h5>
+
+            <p class="light">Not only is this an application to upload pictures, but an interactive and anonymous platform for people to compete for the funniest or dumbest photo of the day</p>
+
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="mdi-image-camera-alt"></i></h2>
+            <h5 class="center">Ease of Use</h5>
+
+            <p class="light">Take pictures or upload them from your favorite repositories including facebook</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Why the f** am I here</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="{% static 'images/kitty.jpg' %}" alt="Unsplashed background img 2"></div>
+  </div>
+
+    <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3 class="brown-text"><i class="mdi-image-camera"></i></h3>
+          <h4>Instagramers,Overhearders and everyone who has a camera! Start snapping  pictures</h4>
+          <p class="center light"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Cause of him...</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="{% static 'images/dog.jpg' %}" alt="Unsplashed background img 3"></div>
+  </div>
+
+
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a dedicated team of hackers and designers who spent 3 hours learning how to code in Django and design and a few more hours to make this happen, so play safe :D</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://wiki.urbandead.com/images/5/5d/Noob.gif">Noob Coders</a>
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{% static 'js/materialize.js' %}"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+  </script>
+
+  <script>
+  $( document ).ready(function) block
+    $(".dropdown-button").dropdown();
+  </script>
+
+  <script src="{% static 'js/init.js' %}"></script>
+
+
+  </body>
+</html>

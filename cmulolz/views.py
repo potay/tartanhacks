@@ -5,6 +5,6 @@ from django.template import RequestContext
 
 def home(request):
     data = {}
-    return render_to_response('base.html',
+    return render_to_response('results.html',
                               data,
                               context_instance=RequestContext(request))

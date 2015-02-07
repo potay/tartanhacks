@@ -1,0 +1,108 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Parallax Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/new.css' %}"type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body class="results_page">
+
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">Upload Pictures</a></li>
+  <li><a href="#!">View Recent Uploads</a></li>
+</ul>
+
+<nav>
+  <div class="nav-wrapper">
+    <div class="col s12">
+      <a href="#!" class="brand-logo">CMU-LOLz</a>
+      <ul class="right side-nav">
+        <li><a href="sass.html">Let me Vote</a></li>
+        <li><a href="components.html">Results</a></li>
+        <!-- Dropdown Trigger -->
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Settings
+          <i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="row">
+  <div class="col m6 l12"> 
+    <h3 class="center">
+      Feb 7th
+    </h3>
+    <div class="divider light"></div>
+
+    <div class="center light">
+      <img src="{% static 'images/kitty.jpg' %}" class="circle responsive-img">
+    </div>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col m6 l12"> 
+    <h3 class="center">
+      Feb 6th
+    </h3>
+    <div class="divider light"></div>
+    <div class="center light">
+      <img src="{% static 'images/kitty.jpg' %}" class="circle responsive-img">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col m6 l12"> 
+    <h3 class="center">
+      Feb 5th
+    </h3>
+    <div class="divider light"></div>
+    <div class="center light margin-top">
+      <img src="{% static 'images/kitty.jpg' %}" class="circle responsive-img">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col m6 l12"> 
+    <h3 class="center">
+      Feb 4th
+    </h3>
+    <div class="divider light"></div>
+    <div class="center light margin-top">
+      <img src="{% static 'images/kitty.jpg' %}" class="circle responsive-img">
+    </div>
+  </div>
+</div>
+
+<!--footer-->
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a dedicated team of hackers and designers who spent 3 hours learning how to code in Django and design and a few more hours to make this happen, so play safe :D</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://wiki.urbandead.com/images/5/5d/Noob.gif">Noob Coders</a>
+      </div>
+    </div>
+  </footer>
+
+  </body>
+</html>
