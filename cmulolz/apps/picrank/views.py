@@ -3,6 +3,8 @@ from django.shortcuts import render
 from models import Picture, Vote, Winner
 from forms import PictureForm
 
+def index(request):
+	return render(request, "index.html")
 # Create your views here.
 def upload(request):
 	if request.method == 'POST':
@@ -44,24 +46,26 @@ def result(request):
 
 	if picture_set > 0:
 		try:
+			print date.day, date.month, date.year
 			winner = Winner.objects.get(date__day = date.day,
 			                              date__month = date.month,
 			                              date__year = date.year)
-			print "123"
+			print winner
 			top_votes = winner.picture.vote_set.count()
-			print "middle"
 			top_picture = winner
-			print "321"
+
 		except:
-			top_votes = 0
+			top_votes = None
 			top_picture = None
 
 		for top in picture_set:
 			if top.vote_set.count() > top_votes:
 				if top_votes > 0:
 					top_picture.picture = top
+					top_votes = top.vote_set.count()
 				else:
 					top_picture = Winner(picture = top, date = datetime.date.today())
+					top_votes = top.vote_set.count()
 		top_picture.save()
 
 		winner_list = Winner.objects.all().order_by('-date')
