@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Picture(models.Model):
 	#things we need: location, time, date, text
-	timestamp = models.DateTimeField(auto_now_add = True)
+	timestamp = models.DateTimeField(editable = True)
 	text = models.TextField(max_length = 500, blank = True)
 	image = models.ImageField()
 
