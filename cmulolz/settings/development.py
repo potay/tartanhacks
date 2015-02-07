@@ -1,4 +1,4 @@
-from django_starter.settings.production import *
+from cmulolz.settings.production import *
 
 TMP_PATH = os.path.abspath(os.path.join(PROJECT_ROOT, 'tmp'))
 
