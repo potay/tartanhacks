@@ -1,19 +1,17 @@
 import random, datetime
 from django.shortcuts import render
 from models import Picture, Vote, Winner
-from django.forms.models import modelformset_factory
 from forms import PictureForm
 
 # Create your views here.
 def upload(request):
-	PictureFormSet = modelformset_factory(Picture)
-	if request.method == 'POST' 
-		formset = PictureForm(request.POST)
-		if formset.is_valid():
+	if request.method == 'POST':
+		form = PictureForm(request.POST)
+		if form.is_valid():
 			form.save()
 	else:
-		formset = PictureForm()
-	return render(request, 'upload.html', {'formset': formset})
+		form = PictureForm()
+	return render(request, 'upload.html', {'form': form})
 
 def vote(request):
 	picture_id = None
@@ -27,8 +25,8 @@ def vote(request):
 	picture_set = Picture.objects.filter(timestamp__day = date.day,
 										 timestamp__month = date.month,
 		                                 timestamp__year = date.year)
-	
-	if picture_id: 
+
+	if picture_id:
 		picture_set = picture_set.exclude(pk = picture_id)
 
 	if len(picture_set) > 1:
@@ -43,18 +41,18 @@ def result(request):
 	picture_set = Picture.objects.filter(timestamp__day = date.day,
 									     timestamp__month = date.month,
 		                                 timestamp__year = date.year)
-	
+
 	if picture_set > 0:
 		try:
-			winner = Winner.objects.get(date__day = date.day, 
-			                              date__month = date.month, 
+			winner = Winner.objects.get(date__day = date.day,
+			                              date__month = date.month,
 			                              date__year = date.year)
 			top_votes = winner.picture.vote_set.count()
 			top_picture = winner
 		except:
 			top_votes = 0
 			top_picture = None
-		
+
 
 		for top in picture_set:
 			if top.vote_set.count() > top_votes:
@@ -76,4 +74,4 @@ def result(request):
 
 
 
-		
+
