@@ -1,6 +1,7 @@
 import random, datetime
 from django.shortcuts import render
 from models import Picture, Vote, Winner
+from forms import PictureForm
 
 # Create your views here.
 def vote(request):
