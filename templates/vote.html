@@ -55,7 +55,7 @@
       {{ pictures.0.text }}
     </h6>
 
-    <div class="center light" style="width: 400px; height: 400px; background-image: url({% get_media_prefix %}{{ pictures.0.image }}); background-size: cover; background-position: center; border-radius: 50%;">
+    <div class="center light left-margin-half" style="width: 400px; height: 400px; background-image: url({% get_media_prefix %}{{ pictures.0.image }}); background-size: cover; background-position: center; border-radius: 50%;">
       &nbsp;
     </div>
   </div>
@@ -69,7 +69,7 @@
       {{ pictures.1.text }}
     </h6>
 
-    <div class="center light" style="width: 400px; height: 400px; background-image: url({% get_media_prefix %}{{ pictures.1.image }}); background-size: cover; background-position: center; border-radius: 50%;">
+    <div class="center light left-margin-half" style="width: 400px; height: 400px; background-image: url({% get_media_prefix %}{{ pictures.1.image }}); background-size: cover; background-position: center; border-radius: 50%;">
       &nbsp;
     </div>
 
@@ -81,7 +81,13 @@
 
 <!--row number 2-->
 <div class="row">
+
  <div class="col s6 m6">
+
+  <form action = "#" method = "post"> <!-- anonymizes-->
+    <input type="button" class="btn waves-effect waves-light left-margin-half" value="click" name="mybutton1"> 
+  </form>
+
   <h5 class="center">
     Percentage of selection
   </h5>
@@ -89,6 +95,11 @@
 </div>
 
  <div class="col s6 m6">
+
+  <form action = "#" method = "post"> <!-- anonymizes-->
+    <input type="button" class="btn waves-effect waves-light left-margin-half" value="click" name="mybutton2"> 
+  </form>
+
   <h5 class="center">
     Percentage of selection
   </h5>
