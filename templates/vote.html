@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,38 +46,31 @@
 
 <!-- row number 1 -->
 <div class="row">
-  <div class="col s6 m12 l6">
+  <div class="col s6 m12 l6 center-align">
 
     <h5 class="center light">
-      Location
-    </h5>
-    <h5 class="center light">
-      Time stamp
+      {{ pictures.0.timestamp }}
     </h5>
     <h6 class="center light">
-      Captions: Damn i should be on diet
+      {{ pictures.0.text }}
     </h6>
 
-
-    <div class="center light">
-      <img src="{% static 'images/kitty.jpg' %}" class="circle responsive-img">
+    <div class="center light" style="width: 400px; height: 400px; background-image: url({% get_media_prefix %}{{ pictures.0.image }}); background-size: cover; background-position: center; border-radius: 50%;">
+      &nbsp;
     </div>
   </div>
 
-  <div class="col s6 m12 l6">
+  <div class="col s6 m12 l6 center-align">
 
     <h5 class="center light">
-      Location
-    </h5>
-    <h5 class="center light">
-      Time stamp
+      {{ pictures.1.timestamp }}
     </h5>
     <h6 class="center light">
-      Caption: I'm a pussy cat
+      {{ pictures.1.text }}
     </h6>
 
-    <div class="center">
-      <img src="{% static 'images/kitty.jpg' %}" class="circle responsive-img">
+    <div class="center light" style="width: 400px; height: 400px; background-image: url({% get_media_prefix %}{{ pictures.1.image }}); background-size: cover; background-position: center; border-radius: 50%;">
+      &nbsp;
     </div>
 
   </div>

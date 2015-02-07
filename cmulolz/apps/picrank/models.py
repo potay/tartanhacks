@@ -7,6 +7,13 @@ class Picture(models.Model):
 	text = models.TextField(max_length = 500, blank = True)
 	image = models.ImageField()
 
+	def __str__(self):
+		return str(self.image) + ": " + str(self.text)
+
 class Vote(models.Model):
 	timestamp = models.DateTimeField(auto_now_add = True)
 	picture = models.ForeignKey('Picture')
+
+class Winner(models.Model):
+	date = models.DateField(editable = True)
+	picture = models.OneToOneField('Picture')

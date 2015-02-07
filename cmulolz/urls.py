@@ -9,7 +9,7 @@ urlpatterns = patterns('',
 
 # Main URL Patterns
 urlpatterns += patterns('',
-    url(r'^$', 'cmulolz.views.home')
+    url(r'^', include('cmulolz.apps.picrank.urls', namespace="main"))
 )
 
 # Development

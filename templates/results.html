@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,56 +36,21 @@
   </div>
 </nav>
 
-
+{% for winner in winners %}
 <div class="row">
   <div class="col m6 l12"> 
     <h3 class="center">
-      Feb 7th
+      {{ winner.date }}
     </h3>
     <div class="divider light"></div>
 
-    <div class="center light">
-      <img src="{% static 'images/kitty.jpg' %}" class="circle responsive-img">
+    <div class="center light" style="width: 400px; height: 400px; background-image: url({% get_media_prefix %}{{ winner.picture.image }}); background-size: cover; background-position: center; border-radius: 50%;">
+      &nbsp;
     </div>
 
   </div>
 </div>
-
-<div class="row">
-  <div class="col m6 l12"> 
-    <h3 class="center">
-      Feb 6th
-    </h3>
-    <div class="divider light"></div>
-    <div class="center light">
-      <img src="{% static 'images/kitty.jpg' %}" class="circle responsive-img">
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col m6 l12"> 
-    <h3 class="center">
-      Feb 5th
-    </h3>
-    <div class="divider light"></div>
-    <div class="center light margin-top">
-      <img src="{% static 'images/kitty.jpg' %}" class="circle responsive-img">
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col m6 l12"> 
-    <h3 class="center">
-      Feb 4th
-    </h3>
-    <div class="divider light"></div>
-    <div class="center light margin-top">
-      <img src="{% static 'images/kitty.jpg' %}" class="circle responsive-img">
-    </div>
-  </div>
-</div>
+{% endfor %}
 
 <!--footer-->
   <footer class="page-footer teal">
