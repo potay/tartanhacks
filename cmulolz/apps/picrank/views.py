@@ -33,10 +33,13 @@ def vote(request):
 
 	if len(picture_set) > 1:
 		picture_pair = random.sample(picture_set, 2)
+		sufficient_picture = True
 	else:
-		picture_pair = picture_set
+		picture_pair = None
+		sufficient_picture = False
 
-	return render(request, 'vote.html', {'pictures': picture_pair})
+	return render(request, 'vote.html', {'pictures': picture_pair;
+		                                 'sufficient': sufficient_picture})
 
 def result(request):
 	date = datetime.datetime.today()
@@ -48,9 +51,8 @@ def result(request):
 		try:
 			print date.day, date.month, date.year
 			winner = Winner.objects.get(date__day = date.day,
-			                              date__month = date.month,
-			                              date__year = date.year)
-			print winner
+			                            date__month = date.month,
+			                            date__year = date.year)
 			top_votes = winner.picture.vote_set.count()
 			top_picture = winner
 
@@ -64,10 +66,11 @@ def result(request):
 					top_picture.picture = top
 					top_votes = top.vote_set.count()
 				else:
-					top_picture = Winner(picture = top, date = datetime.date.today())
+
+					top_picture = Winner(picture = top, 
+						                 date = datetime.date.today())
 					top_votes = top.vote_set.count()
 		top_picture.save()
-
 		winner_list = Winner.objects.all().order_by('-date')
 
 	else:
